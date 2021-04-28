@@ -103,8 +103,29 @@ class Register extends Component {
         return (
             <div className={styles.register_form}>
                 <Form>
+                <FormItem>
+                        {fd('first_name', {
+                            rules: [
+                                {
+                                    required: true,
+                                    message: formatMessage({ id: 'validation.email.required' }),
+                                },
+                            ],
+                        })(<Input size="large" placeholder={formatMessage({ id: 'form.fn.placeholder' })} />)}
+                    </FormItem>
                     <FormItem>
-                        {fd('mail', {
+                        {fd('last_name', {
+                            rules: [
+                                {
+                                    required: true,
+                                    message: formatMessage({ id: 'validation.ln.required' }),
+                                },
+                        
+                            ],
+                        })(<Input size="large" placeholder={formatMessage({ id: 'form.ln.placeholder' })} />)}
+                    </FormItem>
+                    <FormItem>
+                        {fd('email', {
                             rules: [
                                 {
                                     required: true,
@@ -155,7 +176,7 @@ class Register extends Component {
                         })(<Input size="large" type="password" placeholder={formatMessage({ id: 'form.confirm-password.placeholder' })} />)}
                     </FormItem>
                     <FormItem>
-                        {fd('birth', {
+                        {fd('date_of_birth', {
                             rules: [
                                 {
                                     required: true,
@@ -213,9 +234,9 @@ class Register extends Component {
                                     message: formatMessage({ id: 'validation.address.required' }),
                                 },
                             ],
-                        })(<Input size="large" placeholder={formatMessage({ id: 'form.email.placeholder' })} />)}
+                        })(<Input size="large" placeholder={formatMessage({ id: 'form.address.placeholder' })} />)}
                     </FormItem>
-                    <FormItem>
+                    {/* <FormItem>
                         {fd('health', {
                             rules: [
                                 {
@@ -231,7 +252,7 @@ class Register extends Component {
                             <Option value="fine">fine</Option>
                             <Option value="bad">bad</Option>
                           </Select>,)}
-                    </FormItem>
+                    </FormItem> */}
                     {/* <FormItem>
                         <Row gutter={8}>
                             <Col span={16}>

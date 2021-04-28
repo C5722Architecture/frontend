@@ -1,5 +1,11 @@
 export default [
     {
+        title: "user",
+        link: "/sys/users",
+        key: "users",
+        icon: "user"
+    },
+    {
         title: "BMI Table",
         link: "/sys/bmi",
         key: "gitDataV",
@@ -110,12 +116,7 @@ export default [
     //         },
     //     ]
     // },
-    {
-        title: "user",
-        link: "/sys/users",
-        key: "users",
-        icon: "user"
-    },
+
     // {
     //     title: "404",
     //     link: "/404",
